@@ -4,7 +4,7 @@ from pose_extractor import PoseExtractor
 
 def main():
     cap = cv2.VideoCapture(0)
-    extractor = PoseExtractor("landmarkFiles/shape_predictor_68_face_landmarks.dat", 68)
+    extractor = PoseExtractor("../landmarkFiles/shape_predictor_68_face_landmarks.dat", 68)
     while True:
         ref, frame = cap.read()
         points = extractor.get_pose(frame)
